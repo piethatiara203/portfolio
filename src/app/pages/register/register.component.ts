@@ -50,11 +50,8 @@ export class RegisterComponent {
 
     this.authService.register(payload).subscribe(
       (response) => {
-        console.log(response);
-      },
-      (error) => {
-        console.log(error);
-        alert(error.error.message);
+        console.log(response)
+        this.router.navigate(['/login'])
       }
     );
   }

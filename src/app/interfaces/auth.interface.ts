@@ -4,6 +4,7 @@ export interface RequestLogin {
 }
 
 export interface ResponseLogin {
+
   token: string;
   jwtrole: string;
 }

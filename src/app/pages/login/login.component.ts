@@ -42,16 +42,16 @@ export class LoginComponent {
     this.authService.login(payload).subscribe(
       response => {
         console.log(response);
-        alert(response.jwtrole);
-        if (response.jwtrole === 'admin') {
-          localStorage.setItem('token', response.token)
+        alert(response.data.jwtrole);
+        if (response.data.jwtrole === 'admin') {
+          localStorage.setItem('token', response.data.token)
           this.router.navigate(['/admin/dashboard'])
         }
-        if (response.jwtrole === 'user') {
+        if (response.data.jwtrole === 'user') {
           this.router.navigate(['/users']);
         } else {
-          this.showAlert = 'alert alert-warning';
-          console.log("You don't have permission to enter this page")
+          // this.showAlert = 'alert alert-warning';
+          // console.log("You don't have permission to enter this page")
         }
       },
       (error) => {

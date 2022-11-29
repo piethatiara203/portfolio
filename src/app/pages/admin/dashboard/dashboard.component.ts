@@ -70,7 +70,7 @@ export class DashboardComponent {
             email: this.formAdd.value.email,
             noTelp: this.formAdd.value.noTelp,
             password: this.formAdd.value.password,
-            role: this.formAdd.value.password,
+            role: this.formAdd.value.role,
             image: val.data
             // tanggalLahir: this.formAdd.value.tanggalLahir,
           };
