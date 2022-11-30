@@ -23,7 +23,7 @@ describe('AppComponent', () => {
   it(`should have as title 'ng-batch-four'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ng-batch-four');
+    expect(app).toEqual('ng-batch-four');
   });
 
   it('should render title', () => {
